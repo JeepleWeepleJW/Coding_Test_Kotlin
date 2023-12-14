@@ -28,6 +28,7 @@ fun example1(args: Array<String>) {
 
 /**
  * readlnOrNull 함수를 사용한 예시
+ * readlnOrNull 의 경우 null 을 반환하기 때문에 Safe Call 을 사용해야합니다.
  */
 fun example2(args: Array<String>) {
     readlnOrNull()?.let(::println)
@@ -35,6 +36,7 @@ fun example2(args: Array<String>) {
 
 /**
  * 제한사항까지 포함시킨 예시
+ * takeIf 는 null 을 반환하기 때문에 Safe Call 을 사용해야 합니다.
  */
 fun example3(args: Array<String>) {
     readln().takeIf { it.length <= 1000000 }?.let(::println)
